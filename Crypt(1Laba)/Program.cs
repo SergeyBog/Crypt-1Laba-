@@ -1,5 +1,6 @@
 ﻿using Crypt_1Laba_.Part_0;
 using Crypt_1Laba_.Part_1;
+using Crypt_1Laba_.Part_2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,8 @@ namespace Crypt_1Laba_
         static void Main(string[] args)
         {
             //Console.WriteLine(FirstPart());
-            Console.WriteLine(SecondPart());
+            //Console.WriteLine(SecondPart());
+            ThirdPart();
             Console.ReadKey();
         }
         public static string FirstPart()
@@ -23,10 +25,19 @@ namespace Crypt_1Laba_
             return result;
         }
         public static string SecondPart()
-        {
+        {    
             var worker = new GetXoredText();
             string result = worker.GetNormalText();
             return result;
+        } 
+
+        public static string ThirdPart()
+        {
+            var worker = new GetKeyXor();
+            worker.GetByteArr();
+            string result = "";
+            return result;
         }
-    }
+        
+     }
 }
