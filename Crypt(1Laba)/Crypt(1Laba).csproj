@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Part_0\GetText.cs" />
+    <Compile Include="Part_1\GetXoredText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +54,8 @@
   <ItemGroup>
     <Content Include="Part_0\result.png" />
     <Content Include="Part_0\Task0.txt" />
+    <Content Include="Part_1\Task1.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
