@@ -15,7 +15,7 @@ namespace Crypt_1Laba_
         {
             //Console.WriteLine(FirstPart());
             //Console.WriteLine(SecondPart());
-            ThirdPart();
+            Console.WriteLine(ThirdPart());
             Console.ReadKey();
         }
         public static string FirstPart()
@@ -34,8 +34,7 @@ namespace Crypt_1Laba_
         public static string ThirdPart()
         {
             var worker = new GetKeyXor();
-            worker.GetByteArr();
-            string result = "";
+            string result = worker.GetNormalText();
             return result;
         }
         
