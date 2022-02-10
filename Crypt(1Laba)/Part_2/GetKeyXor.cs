@@ -12,28 +12,24 @@ namespace Crypt_1Laba_.Part_2
         public void GetByteArr() {
             var base64 = File.ReadAllText(@"C:\Users\Sergey\source\repos\Crypt(1Laba)\Crypt(1Laba)\Part_2\Task2.txt");
             byte[]text = Convert.FromBase64String(base64);
-            CalculateKeyLength(text);
+            var encodeText = Encoding.ASCII.GetString(text);
+            FindKeyLength(encodeText);
         }
-        private void CalculateKeyLength(byte[] str)
+        public static void FindKeyLength(string encodedText)
         {
-
-            int[] posibleKeyLenght = new int[str.Length];
-            for (int smech = 1; smech < str.Length; smech++)
+            for (int i = 0; i < encodedText.Length; i++)
             {
-                int counter = 0;
-                for (int ind = 0; ind < str.Length; ind++)
+                var n = 0;
+                var offsetText = encodedText.Substring(encodedText.Length - i, i) + encodedText.Substring(0, encodedText.Length - i);
+
+                for (int j = 0; j < encodedText.Length; j++)
                 {
-                    int newInd = (ind + smech) % str.Length;
-                    if (str[ind] == str[newInd])
-                    {
-                        counter++;
-                    }
+                    if (offsetText[j] == encodedText[j])
+                        n++;
                 }
-                posibleKeyLenght[smech] = counter;
+
+                Console.WriteLine(n);
             }
-            Console.WriteLine(posibleKeyLenght.GroupBy(x => x).OrderByDescending(g => g.Count()).First().Key);
-
-
         }
     }
 }
