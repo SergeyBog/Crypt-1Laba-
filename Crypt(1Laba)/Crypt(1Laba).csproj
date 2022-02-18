@@ -46,6 +46,7 @@
     <Compile Include="Part_0\GetText.cs" />
     <Compile Include="Part_1\GetXoredText.cs" />
     <Compile Include="Part_2\GetKeyXor.cs" />
+    <Compile Include="Part_3\GeneticAlgo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +60,8 @@
     <Content Include="Part_1\Task1.txt" />
     <Content Include="Part_2\result2.png" />
     <Content Include="Part_2\Task2.txt" />
+    <Content Include="Part_3\3grams.txt" />
+    <Content Include="Part_3\Task3.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

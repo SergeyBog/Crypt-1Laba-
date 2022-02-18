@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Crypt_1Laba_
 {
-     class Program
+    class Program
     {
         static void Main(string[] args)
         {
             //Console.WriteLine(FirstPart());
             //Console.WriteLine(SecondPart());
-            Console.WriteLine(ThirdPart());
+             Console.WriteLine(ThirdPart());
             Console.ReadKey();
         }
         public static string FirstPart()
@@ -25,11 +25,11 @@ namespace Crypt_1Laba_
             return result;
         }
         public static string SecondPart()
-        {    
+        {
             var worker = new GetXoredText();
             string result = worker.GetNormalText();
             return result;
-        } 
+        }
 
         public static string ThirdPart()
         {
@@ -37,6 +37,10 @@ namespace Crypt_1Laba_
             string result = worker.GetNormalText();
             return result;
         }
-        
+        public static string ForthPart()
+        {
+            string result = "";
+            return result;
+        }
      }
 }
