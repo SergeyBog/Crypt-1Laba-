@@ -1,6 +1,7 @@
 ﻿using Crypt_1Laba_.Part_0;
 using Crypt_1Laba_.Part_1;
 using Crypt_1Laba_.Part_2;
+using Crypt_1Laba_.Part_3;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,9 @@ namespace Crypt_1Laba_
         static void Main(string[] args)
         {
             //Console.WriteLine(FirstPart());
-            //Console.WriteLine(SecondPart());
-             Console.WriteLine(ThirdPart());
+            // Console.WriteLine(SecondPart());
+            // Console.WriteLine(ThirdPart());
+            //Console.WriteLine(ForthPart());
             Console.ReadKey();
         }
         public static string FirstPart()
@@ -39,7 +41,8 @@ namespace Crypt_1Laba_
         }
         public static string ForthPart()
         {
-            string result = "";
+            var worker = new GeneticAlgo();
+            string result = worker.GetNormalText();
             return result;
         }
      }

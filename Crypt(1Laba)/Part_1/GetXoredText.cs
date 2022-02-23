@@ -31,19 +31,32 @@ namespace Crypt_1Laba_.Part_1
         public string Decryption(byte[] byteArr)
         {
             string ready = "";
-            var result = new string[256];
-            var buffer = new byte[byteArr.Length];
+            string[] result = new string[256];
+            byte[] buffer = new byte[byteArr.Length];
             for (var i = 0; i < 256; i++)
             {
                 for (var j = 0; j < buffer.Length; j++)
                 {
                     buffer[j] = (byte)(byteArr[j] ^ i);
                 }
-
                 result[i] = Encoding.UTF8.GetString(buffer);
             }
-            ready = result.OrderBy(GetEnglishText).First();
-            return ready;
+            double counter = 0;
+            int resikLine = 0;
+            for (int k = 0; k < result.Length; k++)
+            {
+                double roflik =  GetEnglishTextKoef(result[k]);
+                if (k==0)
+                {
+                    counter = roflik;
+                }
+                else if (counter > roflik)
+                {
+                   counter = roflik;
+                   resikLine = k;
+                }
+            }
+            return result[resikLine];
         }
         private List<double> EngLettersFreq = new List<double>()
         {
@@ -55,7 +68,7 @@ namespace Crypt_1Laba_.Part_1
             0.00074
         };
         private double[] Letters_Amount = new double[26];
-        public double GetEnglishText(string text)
+        public double GetEnglishTextKoef(string text)
         {
             string validChars = "[\\s-.,_()“”]";
             string cleanText = Regex.Replace(text, validChars, "");

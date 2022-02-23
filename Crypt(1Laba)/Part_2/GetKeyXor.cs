@@ -14,8 +14,8 @@ namespace Crypt_1Laba_.Part_2
         {
             var base64 = File.ReadAllText(@"C:\Users\Sergey\source\repos\Crypt(1Laba)\Crypt(1Laba)\Part_2\Task2.txt");
             byte[] text = Convert.FromBase64String(base64);
-            // var encodeText = Encoding.ASCII.GetString(text);
-            //FindLenghtOfKey(encodeText);
+           // string encodeText = Encoding.ASCII.GetString(text);
+           // FindLenghtOfKey(encodeText);
             int keyLenght = 3;
             return DecryptedText(keyLenght, text);
         }
@@ -33,10 +33,7 @@ namespace Crypt_1Laba_.Part_2
             }
             var result = WorkWithSection(decryptedSections, keyLenght);
             return result;
-        }
-
-      
-        
+        }   
         public List<List<byte>>GetDevidedSectionBykey(int length, byte[] text)
         {
             List<List<byte>> result = new List<List<byte>>();
@@ -88,19 +85,17 @@ namespace Crypt_1Laba_.Part_2
 
         }
 
-        /*public void FindLenghtOfKey(string encodedText)
+       /* public void FindLenghtOfKey(string encodedText)
         {
             for (int i = 0; i < encodedText.Length; i++)
             {
                 var number = 0;
-                var offsetText = encodedText.Substring(encodedText.Length - i, i) + encodedText.Substring(0, encodedText.Length - i);
-
+                var workText = encodedText.Substring(encodedText.Length - i, i) + encodedText.Substring(0, encodedText.Length - i);
                 for (int j = 0; j < encodedText.Length; j++)
                 {
-                    if (offsetText[j] == encodedText[j])
+                    if (workText[j] == encodedText[j])
                         number++;
                 }
-
                 Console.WriteLine(number);
             }
         }*/
