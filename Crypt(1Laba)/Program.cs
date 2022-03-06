@@ -17,7 +17,7 @@ namespace Crypt_1Laba_
             //Console.WriteLine(FirstPart());
             // Console.WriteLine(SecondPart());
             // Console.WriteLine(ThirdPart());
-            //Console.WriteLine(ForthPart());
+            Console.WriteLine(ForthPart());
             Console.ReadKey();
         }
         public static string FirstPart()

@@ -30,7 +30,6 @@ namespace Crypt_1Laba_.Part_1
         }
         public string Decryption(byte[] byteArr)
         {
-            string ready = "";
             string[] result = new string[256];
             byte[] buffer = new byte[byteArr.Length];
             for (var i = 0; i < 256; i++)

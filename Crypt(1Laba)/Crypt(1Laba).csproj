@@ -61,6 +61,7 @@
     <Content Include="Part_2\result2.png" />
     <Content Include="Part_2\Task2.txt" />
     <Content Include="Part_3\3grams.txt" />
+    <Content Include="Part_3\result3.png" />
     <Content Include="Part_3\Task3.txt" />
   </ItemGroup>
   <ItemGroup />
